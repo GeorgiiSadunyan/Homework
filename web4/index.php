@@ -210,7 +210,7 @@ $gender = isset($_POST['gender']) ? $_POST['gender'] : '';
 $biography = isset($_POST['biography']) ? $_POST['biography'] : '';
   $user = 'u67501';
     $pass = '1064664';
-    $db = new PDO('mysql:host=localhost;dbname=u67419', $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $db = new PDO('mysql:host=localhost;dbname=u67501', $user, $pass, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     foreach ($_POST['languages'] as $language) {
