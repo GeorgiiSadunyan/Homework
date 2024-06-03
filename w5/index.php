@@ -183,7 +183,7 @@ else {
             $stmt = $db->prepare("INSERT INTO application_languages SET id = ?, name_of_language = ?");
             $stmt->execute([$count, $item]);
         }
-        $stmt = $db->prepare("INSERT INTO login_pass SET id = ?, login = ?, pass = ?");
+        $stmt = $db->prepare("INSERT INTO login_pass (id, login, pass) VALUES (?, ?, ?)");
         $stmt->execute([$count, $login, md5($pass)]);
     }
     setcookie('save', '1');

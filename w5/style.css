@@ -1,63 +1,103 @@
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif; 
-    background-color: #f0f0f0; 
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Контейнер формы */
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+}
+
+/* Заголовок */
+h2 {
+    text-align: center;
+    color: #007bff;
+}
+
+/* Поля формы */
 input[type="text"],
 input[type="tel"],
-input[type="email"],
 input[type="date"],
+input[type="password"],
 textarea,
 select {
-    width: 100%; 
-    padding: 10px; 
-    margin-bottom: 15px; 
-    border: 1px solid #ccc; 
-    border-radius: 5px; 
-    box-sizing: border-box; 
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-input[type="radio"],
+/* Радио-кнопки */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Чекбокс */
 input[type="checkbox"] {
-    margin-right: 5px; 
+    margin-right: 10px;
 }
 
-label {
-    font-weight: bold; 
+/* Сообщения */
+.messages {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
 }
 
-.submit {
-    padding: 10px 20px; 
-    background-color: #390a59; 
-    color: #fff; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-}
-
-.submit:hover {
-    background-color: #ad00b3; 
-}
+/* Ошибки */
 .error {
-    border-color: red; 
+    border: 1px solid #e3342f !important;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
 }
 
-input[name="names"] {
-    border: 1px solid #ced4da; 
-    border-radius: 4px; 
-    padding: 8px; 
-    width: 100%; 
-    box-sizing: border-box; 
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; 
+/* Кнопка отправки */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-input[name="names"]:focus {
-    border-color: #80bdff; 
-    outline: 0; 
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); 
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }
 
+/* Ссылка на вход/выход */
+.enter-exit {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
 
-input[name="names"][names="error"] {
-    border-color: red; 
+.enter-exit:hover {
+    text-decoration: underline;
 }

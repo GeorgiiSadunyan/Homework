@@ -1,5 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ФОРМА</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-Телефон:<br><input type="tel" name="phone" <?php if ($errors['phone']) {print 'class="group error"';} else print 'class="group"'; ?> value="<?php print $values['phone']; ?>">
+<body>
+  <?php  
+    if (!empty($messages)) {
+      print('<div class="messages">');
+      foreach ($messages as $message) {
+        print($message);
+      }
+      print('</div>');
+    }
+  ?>
+
+  <div class="container">
+    <h2>Форма</h2>
+    <form action="" method="POST">
+      Имя:<br><input type="text" name="names" <?php if ($errors['names']) {print 'class="group error"';} else print 'class="group"'; ?> value="<?php print $values['names']; ?>">
+      <br>
+      Телефон:<br><input type="tel" name="phone" <?php if ($errors['phone']) {print 'class="group error"';} else print 'class="group"'; ?> value="<?php print $values['phone']; ?>">
       <br>
       E-mail:
         <br><input type="text" name="email" <?php if ($errors['email']) {print 'class="group error';} else print 'class="group"'; ?> value="<?php print $values['email']; ?>"><br>
